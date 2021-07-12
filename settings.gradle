@@ -1,0 +1,2 @@
+rootProject.name = "0_Tips_Task"
+include ':app'
