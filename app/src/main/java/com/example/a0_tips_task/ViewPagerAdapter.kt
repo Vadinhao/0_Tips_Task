@@ -1,6 +1,5 @@
 package com.example.a0_tips_task
 
-import android.content.res.Resources
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -40,9 +39,10 @@ class ViewPagerAdapter() : RecyclerView.Adapter<ViewPagerAdapter.ScreenViewHolde
     }
 
     override fun onBindViewHolder(holder: ScreenViewHolder, position: Int) {
-        holder.titleView.text = Resources.getSystem().getString(titles[position]);
+        val context = holder.titleView.context
+        holder.titleView.text = context.getString(titles[position]);
         holder.imgView.setImageResource(images[position])
-        holder.textView.text = Resources.getSystem().getString(texts[position]);
+        holder.textView.text = context.getString(texts[position]);
     }
 
     class ScreenViewHolder(private val view: View) : RecyclerView.ViewHolder(view) {
