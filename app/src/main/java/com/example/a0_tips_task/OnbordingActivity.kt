@@ -16,5 +16,19 @@ class OnbordingActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         binding.viewPager2.adapter = ViewPagerAdapter()
+
+        binding.buttonBack.setOnClickListener{
+
+        }
+
+        binding.buttonSkip.setOnClickListener {
+
+        }
+
+        binding.buttonNext.setOnClickListener {
+
+        }
+
+        //adding dots
     }
 }

@@ -12,13 +12,12 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/title_for_onbording_1"
-        android:layout_marginTop="120dp"
+        android:layout_marginTop="90dp"
         android:fontFamily="serif"
         android:textSize="28dp"
-        android:textColor="@color/black"
         android:textAlignment="center"
         android:gravity="center_horizontal"
-        android:textStyle="bold"/>
+        android:textStyle="bold" />
 
     <ImageView
         android:id="@+id/imageView"
@@ -35,7 +34,6 @@
         android:layout_marginTop="20dp"
         android:fontFamily="serif"
         android:textSize="20dp"
-        android:textColor="@color/black"
         android:textAlignment="center"
         android:gravity="center_horizontal" />
 
