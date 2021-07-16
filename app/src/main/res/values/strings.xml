@@ -10,8 +10,10 @@
     <string name="text_for_onbording_2">Сalculate the tip</string>
     <string name="text_for_onbording_3">Pay the bill and tip</string>
     <string name="text_for_onbording_4">TESTING</string>
-    //*** Text for buttons ***//
+    //*** Text for buttons at onbording ***//
     <string name="button_for_onbording_1">Back</string>
     <string name="button_for_onbording_2">Skip</string>
     <string name="button_for_onbording_3">Next</string>
+    //*** Elements for onbording ***///
+    <string name="dot_for_onbording">•</string>
 </resources>
