@@ -35,11 +35,7 @@ class OnbordingActivity : AppCompatActivity() {
         )
         val hasVisited = sharPref.getBoolean("hasVisited", false)
 
-        if (!hasVisited) {
-            val e: SharedPreferences.Editor = sharPref.edit()
-            e.putBoolean("hasVisited", true)
-            e.apply()
-        } else {
+        if(hasVisited) {
             startActivity(startApp)
             finish()
         }
@@ -55,6 +51,10 @@ class OnbordingActivity : AppCompatActivity() {
         }
 
         binding.buttonSkip.setOnClickListener {
+            val e: SharedPreferences.Editor = sharPref.edit()
+            e.putBoolean("hasVisited", true)
+            e.apply()
+
             startActivity(startApp)
             finish()
         }
@@ -65,6 +65,10 @@ class OnbordingActivity : AppCompatActivity() {
             if (getViewPagerItem(0) < 2) {
                 binding.viewPager2.setCurrentItem(getViewPagerItem(1), true)
             } else {
+                val e: SharedPreferences.Editor = sharPref.edit()
+                e.putBoolean("hasVisited", true)
+                e.apply()
+
                 startActivity(startApp)
                 finish()
             }
