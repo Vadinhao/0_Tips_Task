@@ -7,7 +7,6 @@ import android.content.SharedPreferences
 import android.os.Build
 import android.os.Bundle
 import android.view.View
-import android.widget.TextView
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
 import androidx.viewpager2.widget.ViewPager2
@@ -46,6 +45,7 @@ class OnbordingActivity : AppCompatActivity() {
         setContentView(binding.root)
         //***
         binding.viewPager2.adapter = ViewPagerAdapter()
+        binding.springDotsIndicator.setViewPager2(binding.viewPager2)
         //***
         binding.buttonBack.setOnClickListener {
             binding.viewPager2.setCurrentItem(binding.viewPager2.currentItem - 1, true)
@@ -89,31 +89,7 @@ class OnbordingActivity : AppCompatActivity() {
                 } else {
                     binding.buttonBack.visibility = View.INVISIBLE
                 }
-
-                //setUpDots(position)
             }
         })
-    }
-
-    @RequiresApi(Build.VERSION_CODES.M)
-    @SuppressLint("ResourceType")
-    fun setUpDots(position: Int) {
-
-        val dots: Array<TextView> = arrayOf(
-            this.layoutInflater.inflate(R.layout.text_view, null) as TextView,
-            this.layoutInflater.inflate(R.layout.text_view, null) as TextView,
-            this.layoutInflater.inflate(R.layout.text_view, null) as TextView
-        )
-
-        binding.linerLayout.removeAllViews()
-
-        for (i in INDEX_OF_FIRST_PAGE..INDEX_OF_LAST_PAGE) {
-            dots[i].text = getString(R.string.dot_for_onbording)
-            dots[i].textSize = 35F
-            dots[i].setTextColor(getColor(R.color.onborging_gray))
-            binding.linerLayout.addView(dots[i])
-        }
-
-        dots[position].setTextColor(getColor(R.color.onborging_green))
     }
 }
