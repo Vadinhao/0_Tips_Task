@@ -14,6 +14,9 @@
     <string name="button_for_onbording_1">Back</string>
     <string name="button_for_onbording_2">Skip</string>
     <string name="button_for_onbording_3">Next</string>
-    //*** Elements for onbording ***///
+    //*** Elements for onbording ***//
     <string name="dot_for_onbording">•</string>
+    //*** keys for onbording ***//
+    <string name= "has_visited">"hasVisited"</string>
+    <string name= "app_settings">"app_settings"</string>
 </resources>
