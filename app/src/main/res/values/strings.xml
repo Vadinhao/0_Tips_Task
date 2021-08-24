@@ -1,20 +1,20 @@
 <resources>
     <string name="app_name">0_Tips_Task</string>
-    //*** Titles for onbording ***//
-    <string name="title_for_onbording_1">Step one</string>
-    <string name="title_for_onbording_2">Step two</string>
-    <string name="title_for_onbording_3">Step three</string>
-    <string name="title_for_onbording_4">STEP FOUR</string>
-    //*** Text for onbording ***//
-    <string name="text_for_onbording_1">Get the bill</string>
-    <string name="text_for_onbording_2">Сalculate the tip</string>
-    <string name="text_for_onbording_3">Pay the bill and tip</string>
-    <string name="text_for_onbording_4">TESTING</string>
+    //*** Titles for onboarding ***//
+    <string name="title_for_onboarding_1">Step one</string>
+    <string name="title_for_onboarding_2">Step two</string>
+    <string name="title_for_onboarding_3">Step three</string>
+    <string name="title_for_onboarding_4">STEP FOUR</string>
+    //*** Text for onboarding ***//
+    <string name="text_for_onboarding_1">Get the bill</string>
+    <string name="text_for_onboarding_2">Сalculate the tip</string>
+    <string name="text_for_onboarding_3">Pay the bill and tip</string>
+    <string name="text_for_onboarding_4">TESTING</string>
     //*** Text for buttons at onbording ***//
-    <string name="button_for_onbording_1">Back</string>
-    <string name="button_for_onbording_2">Skip</string>
-    <string name="button_for_onbording_3">Next</string>
-    //*** keys for onbording ***//
+    <string name="button_for_onboarding_back">Back</string>
+    <string name="button_for_onboarding_skip">Skip</string>
+    <string name="button_for_onboarding_next">Next</string>
+    //*** keys for onboarding ***//
     <string name= "has_visited">"hasVisited"</string>
     <string name= "app_settings">"app_settings"</string>
 </resources>

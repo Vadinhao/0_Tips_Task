@@ -25,7 +25,6 @@ class ViewPagerAdapter() : RecyclerView.Adapter<ViewPagerAdapter.ScreenViewHolde
     }
 
     override fun onBindViewHolder(holder: ScreenViewHolder, position: Int) {
-        val context = holder.titleView.context
         holder.bind(data[position])
     }
 
