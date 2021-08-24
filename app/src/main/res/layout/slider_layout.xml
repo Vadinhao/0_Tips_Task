@@ -24,7 +24,7 @@
         android:layout_width="match_parent"
         android:layout_marginTop="20dp"
         android:layout_height="300dp"
-        android:src="@drawable/onbording_step_1" />
+        android:src="@drawable/onboarding_step_1" />
 
     <TextView
         android:id="@+id/textView_text"

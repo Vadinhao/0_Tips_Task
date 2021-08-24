@@ -1,16 +1,17 @@
 package com.example.a0_tips_task
 
+import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.example.a0_tips_task.data.dataSource
+import com.example.a0_tips_task.data.Pages
 
 class ViewPagerAdapter() : RecyclerView.Adapter<ViewPagerAdapter.ScreenViewHolder>() {
 
-    private var data = dataSource().loadData()
+    private var data : Array<Pages> = Pages.values()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ScreenViewHolder {
         val layout = LayoutInflater
@@ -24,15 +25,18 @@ class ViewPagerAdapter() : RecyclerView.Adapter<ViewPagerAdapter.ScreenViewHolde
     }
 
     override fun onBindViewHolder(holder: ScreenViewHolder, position: Int) {
-        val context = holder.titleView.context
-        holder.titleView.text = context.getString(data[position].titleResId)
-        holder.imgView.setImageResource(data[position].imgResId)
-        holder.textView.text = context.getString(data[position].textResId)
+        holder.bind(data[position])
     }
 
     class ScreenViewHolder(private val view: View) : RecyclerView.ViewHolder(view) {
         var titleView: TextView = view.findViewById<TextView>(R.id.textView_title)
         var textView: TextView = view.findViewById<TextView>(R.id.textView_text)
         var imgView: ImageView = view.findViewById<ImageView>(R.id.imageView)
+        @SuppressLint("ResourceType")
+        fun bind(item: Pages){
+            titleView.text = itemView.context.getString(item.titleResId)
+            textView.text = itemView.context.getString(item.textResId)
+            imgView.setImageResource(item.imgResId)
+        }
     }
 }

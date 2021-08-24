@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".OnbordingActivity">
+    tools:context=".OnboardingActivity">
 
     <Button
         android:id="@+id/button_Back"
@@ -14,11 +14,11 @@
         android:layout_marginLeft="16dp"
         android:layout_marginBottom="6dp"
         android:fontFamily="serif"
-        android:text="@string/button_for_onbording_1"
+        android:text="@string/button_for_onboarding_back"
         app:backgroundTint="@android:color/transparent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/viewPager2" />
+        app:layout_constraintTop_toBottomOf="@+id/viewPager" />
 
     <Button
         android:id="@+id/button_Skip"
@@ -26,13 +26,13 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="6dp"
         android:fontFamily="serif"
-        android:text="@string/button_for_onbording_2"
+        android:text="@string/button_for_onboarding_skip"
         app:backgroundTint="@android:color/transparent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/button_Next"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toEndOf="@+id/button_Back"
-        app:layout_constraintTop_toBottomOf="@+id/viewPager2" />
+        app:layout_constraintTop_toBottomOf="@+id/viewPager" />
 
     <Button
         android:id="@+id/button_Next"
@@ -42,15 +42,15 @@
         android:layout_marginRight="16dp"
         android:layout_marginBottom="6dp"
         android:fontFamily="serif"
-        android:text="@string/button_for_onbording_3"
+        android:text="@string/button_for_onboarding_next"
         android:visibility="visible"
         app:backgroundTint="@android:color/transparent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/viewPager2" />
+        app:layout_constraintTop_toBottomOf="@+id/viewPager" />
 
     <androidx.viewpager2.widget.ViewPager2
-        android:id="@+id/viewPager2"
+        android:id="@+id/viewPager"
         android:layout_width="414dp"
         android:layout_height="500dp"
         android:visibility="visible"
@@ -58,17 +58,22 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <LinearLayout
-        android:id="@+id/liner_layout"
+    <com.tbuonomo.viewpagerdotsindicator.SpringDotsIndicator
+        android:id="@+id/spring_dots_indicator"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginRight="16dp"
-        android:orientation="horizontal"
+        android:layout_marginTop="8dp"
+        app:dampingRatio="0.5"
+        app:dotsColor="@color/onborging_green"
+        app:selectedDotColor="@color/white"
+        app:dotsCornerRadius="2dp"
+        app:dotsSize="16dp"
+        app:dotsSpacing="6dp"
+        app:dotsStrokeWidth="2dp"
+        app:stiffness="300"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/viewPager2" />
+        app:layout_constraintTop_toBottomOf="@+id/viewPager"
+        />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
